@@ -1,10 +1,8 @@
-# Fast Random Approximation of Room Impulse Response (FRA-RIR)
+# Fast Random Approximation of Multi-channel Room Response Impulse (FRAM-RIR)
 
-This is the repository for a Pytorch-based implementation of FRA-RIR method for data augmentation purpurse in simulating reverberant signals. FRA-RIR is a Image-source method (ISM) based RIR simulation method that replaces the explicit calculation of the delay and reflections of the virtual sound sources by random approximations. With a CPU-only simulation pipeline, FRA-RIR can be significantly faster than other RIR simulation tools, enabling fully on-the-fly data simulation during training, but also improves the model performance when evaluated on realistic RIR data.
+This is the repository for a Pytorch-based implementation of Fast Random Approximation of Multi-channel Room Response Impulse (FRAM-RIR) method for data augmentation purpurse in simulating spatialized reverberant signals. FRAM-RIR is a image-source method (ISM) based RIR simulation method that bypasses the explicit calculation of sound propagation paths in ISM-based algorithms by randomly sampling the location and number of reflections of each virtual sound source based on several heuristic assumptions, while still maintains accurate direction-of-arrival (DOA) information of all sound sources.
+FRAM-RIR can not only simulate RIR filters that better mimic the patterns of real RIR filters than existing tools, but is also significantly faster than other CPU-based methods with a single thread and faster than GPU-accelerated methods with multi-threading.
 
-Please refer to our paper on [Arxiv](https://arxiv.org/abs/2208.04101) for details.
-
-![](https://github.com/yluo42/FRA-RIR/blob/main/FRA-RIR-result.png)
 
 ## Disclaimer
 This is not an officially supported Tencent product.
